@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Токио</title>
+        <link href="general.css" rel="stylesheet">
+        <link href="media.css" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <h1>Токио</h1>
+        </header>
+        <section>
+            <div class="transition">
+                <a href="#" class="menu">Меню</a>
+                <nav>
+                    <ul>
+                        <li class="currentPage"><a href="index.html">Главная</a></li>
+                        <li><a href="city.html">Город</a></li>
+                        <li><a href="tour.html">Путешествие</a></li>
+                        <li><a href="map.html">Карта</a></li>
+                        <li><a href="souvenirs.html">Сувениры</a></li>
+                        <li><a href="form.html">Задайте вопрос</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <aside>
+                <h2>Метро</h2>
+                <p>Токийский метрополитен является крупнейшим в мире по пассажиропотоку - им пользуются 3,2 миллиарда человек в год. Интересен тот факт, что здесь даже существует специальная должность – осия, или толкатели, в обязанности которых входит заталкивание пассажиров в переполненные вагоны.</p>
+                <h2>Зоопарк</h2>
+                <p>Токийский зоопарк Уэно - старейший зоопарк Японии, в нем содержится более 2600 питомцев. Раз в год зоопарк закрывают на 2 месяца, чтобы дать животным отдохнуть от посетителей.</p>
+                <h2>Парк Уэно</h2>
+                <p>На территории паркового комплекса расположены несколько крупнейших музеев, в том числе Токийский национальный музей, концертный зал, крупнейший городской зоопарк и главный корпус Токийского университета искусств.</p>
+            </aside>
+            <main>
+                <div id="newsTicker" class="news-ticker">
+                    <div class="news-item"><a href="https://visitjapan.ru/spot/1675">Фестиваль сакуры в Токио привлекает тысячи туристов.</a></div>
+                    <div class="news-item"><a href="https://ru.wikipedia.org/wiki/%D0%9D%D0%B0%D1%86%D0%B8%D0%BE%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D0%BC%D1%83%D0%B7%D0%B5%D0%B9_%D1%81%D0%BE%D0%B2%D1%80%D0%B5%D0%BC%D0%B5%D0%BD%D0%BD%D0%BE%D0%B3%D0%BE_%D0%B8%D1%81%D0%BA%D1%83%D1%81%D1%81%D1%82%D0%B2%D0%B0_(%D0%A2%D0%BE%D0%BA%D0%B8%D0%BE)">Открытие нового музея современного искусства.</a></div>
+                    <div class="news-item"><a href="https://expomap.ru/expo/city/tokyo/2024/">Технологическая выставка 2024</a></div>
+                </div>
+                <h2>О городе</h2>
+                <p>Токио – столица Японии, город в юго-восточной части острова Хонсю, на берегу Токийского залива Тихого океана. Численность населения Токио превышает отметку в 13 миллионов человек.</p>            
+                <img src="images/tokyo.jpg" alt="Картинка">
+                <h2>Гиндза</h2>
+                <p>Один из самых известных, веселых и шумных районов Токио – Гиндза. Это слово переводится как «монета». Квартал получил свое название благодаря Монетному двору, где с XVII по XIX век чеканились японские серебряные монеты.</p>
+            </main>
+            <script>
+                const ticker = document.getElementById('newsTicker');
+                let offset = 0;
+                function scrollNews() {
+                    if (offset <= -ticker.firstChild.offsetWidth) {
+                        ticker.appendChild(ticker.firstChild);
+                        offset = 0;
+                    }
+                    ticker.style.transform = 'translateX(' + offset + 'px)';
+                    offset -= 1;
+                }
+                setInterval(scrollNews, 20);
+            </script>
+        </section>
+        <footer>
+            <p>Культура Японии очень необычна, поэтому город Токио - настоящий подарок для любителей интересных фактов!</p>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,104 @@
+@font-face {
+    font-family: bonzai;
+    src: url(fonts/bonzai.ttf);
+}
+body {
+    margin: 0;
+    background-color: rgb(248, 248, 248);
+    font-family: sans-serif;
+}
+header {
+    background-image: url(images/sakura-header-bg.png);
+    overflow: hidden;
+}
+header h1 {
+    font-family: bonzai;
+    text-align: center;
+    color: white;
+    text-shadow: 2px 1px 2px black;
+}
+footer {
+    text-align: center;
+    color: whitesmoke;
+    background-color: #073f6b;
+    overflow: hidden;
+    clear: both;
+}
+h2 {
+    font-family: bonzai;
+    color: white;
+}
+nav a, span {
+    color: white;
+    text-transform: capitalize;
+}
+nav a {
+    text-decoration: none;
+}
+ul {
+    list-style-type: none;
+}
+nav li {
+    overflow: hidden;
+    background-color: #3d9be3;
+    margin-bottom: 5px;
+    padding: 5px;
+}
+aside {
+    padding-left: 5px;
+}
+main h2 {
+    color: #aa1782;
+}
+main p {
+    color: #002947;
+}
+.souvenir-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+.souvenir-item {
+    flex: 1 1 30%;
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease-in-out;
+}
+.souvenir-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.souvenir-item:hover {
+    transform: scale(1.05);
+}
+.news-ticker {
+    white-space: nowrap;
+    background-color: #aa1782;
+    padding: 10px;
+}
+.news-ticker a {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+.news-item {
+    display: inline-block;
+    padding-right: 50px;
+}
+.route {
+    margin: 20px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.route img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+.currentPage {
+    background-color: #145d95;
+}

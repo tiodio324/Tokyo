@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Профиль пользователя</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="all.css">
+        <link rel="stylesheet" href="Fonts/fontawesome-free-6.2.1-web/css/all.css">
+        <style>
+            a {
+                text-decoration: none;
+                color: #007bff;
+            }
+            a:hover {
+                text-decoration: underline;
+                text-decoration-color: #0056c4;
+                color: #0a80ff;
+            }
+            .border {
+                padding: 25px 15px;
+                border-left: 5px solid #17a2b8;
+                border-radius: 10px;
+                border-top: 1px solid #eeeeee;
+                border-radius: 1px solid #eeeeee;
+                border-bottom: 1px solid #eeeeee;
+                width: 90%;
+            }
+            #submit {
+                background-color: #007bff;
+            }
+            #submit:hover {
+                background-color: #0069d9;
+            }
+            input {
+                border: 1px solid #ced4da;
+                margin: 10px 0;
+            }
+            main {
+                margin: 0 auto;
+                color: #212529;
+                font: Arial, 16px;
+                width: 80%;
+            }
+            input::placeholder {
+                color: #6c757d;
+            }
+            form {
+                display: flex;
+                flex-direction: column;
+            }
+            #txt {
+                padding-bottom: 100px;
+                width: 90%;
+            }
+            #login, #number {
+                width: 180px;
+                padding: 5px;
+            }
+            #submit {
+                padding: 10px;
+                width: fit-content;
+                color: whitesmoke;
+            }
+            section label:not(.spam) {
+                color: white;
+                transition: all .5s ease;
+                overflow: hidden;
+                padding: 5px;
+                border-radius: 5px;
+            }
+            section input:hover + label:not(.spam) {
+                background-color: #1a1a1a;
+            }
+            .txt {
+                position: relative;
+                top: 35px;
+            }
+            .login, .number {
+                position: relative;
+                top: 1.5px;
+            }
+            input {
+                border-radius: 10px;
+            }
+            h3 {
+                margin-right: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <form>
+                <label for="txt">Текст вопроса</label>
+                <section>
+                    <input type="tel" id="txt" placeholder="Текст вопроса">
+                    <label for="txt" class="txt">Текст вопроса</label>
+                </section>
+                <label for="login">E-mail</label>
+                <section>
+                    <input type="email" id="login" placeholder="maries@avalon.ru">
+                    <label for="login" class="login">Адрес электронной почты</label>
+                </section>
+                <label for="number">Номер телефона</label>
+                <section>
+                    <input type="tel" id="number" placeholder="+7 (123) 456-76-90">
+                    <label for="number" class="number">Номер телефона</label>
+                </section>
+                <section>
+                    <input type="checkbox" id="spam">
+                    <label for="spam" class="spam">Я <a href="#">согласен</a> на обработку персональных данных. <a href="#">Политика конфедициальности.</a></label>
+                </section>
+                <input type="submit" id="submit">
+                    
+            </form>
+            <p class="border">Ваш запрос будет рассмотрен в течениее двух рабочих дней. О результатах Вам будет сообщено по телефону или e-mail.</p>
+            <h3><a href=index.html>Вернуться на главную</a></h3>
+        </main>
+    </body>
+</html>
